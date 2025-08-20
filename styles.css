@@ -269,3 +269,50 @@ body {
   position: absolute;
   margin-top: -58px;
 }
+.seasonal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  top: -50px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  animation: fall 10s linear infinite;
+}
+
+.snowflake {
+  background: radial-gradient(white, transparent);
+  border-radius: 50%;
+}
+
+.leaf {
+  background: url('leaf.png') no-repeat center;
+  background-size: contain;
+}
+
+.blossom {
+  background: url('blossom.png') no-repeat center;
+  background-size: contain;
+}
+
+.spark {
+  background: radial-gradient(yellow, orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px gold;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
